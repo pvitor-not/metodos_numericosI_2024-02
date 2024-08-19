@@ -77,3 +77,4 @@ for i in range(len(X)):
 # Mostra o gráfico após todas as iterações
 plt.show()
 #teste
+#Boa noite bolsonaro
