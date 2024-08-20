@@ -9,7 +9,7 @@ def serie_tarefa1(x, n):
     return ((-1)**n) * (((2*x) + 3)**n) / (n * math.log(n))
 
 # Definição de x
-X = [-2, -1]
+X = [-1.5, -1]
 
 # Definição do critério de parada (Eppara)
 N = 8  # Critério de parada
@@ -42,8 +42,10 @@ for i in range(len(X)):
 
         old = new
         new = soma
-
-        erro = abs((new - old) / new) * 100
+        if new==0:
+            erro = 0
+        else:
+            erro = abs((new - old) / new) * 100
 
         ERROR.append(erro)
         SOMA.append(soma)
