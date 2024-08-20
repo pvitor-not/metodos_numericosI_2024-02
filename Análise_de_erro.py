@@ -9,12 +9,14 @@ def serie_tarefa1(x, n):
     return ((-1)**n) * (((2*x) + 3)**n) / (n * math.log(n))
 
 # Definição de x
-X = [-1.6, -1.3]
+X = [-1.99, -1.6, -1.3 , -1.01]
 
 # Definição do critério de parada (Eppara)
 N = 8  # Critério de parada
 Eppara = (0.5 * 10**(2 - N))  # "N" número de algarismos significativos
 print(f"Eppara: {Eppara}")
+
+Iteracao_plot = []
 
 # Loop para cada valor de X
 for i in range(len(X)):
@@ -54,6 +56,8 @@ for i in range(len(X)):
         iteracao += 1
         n += 1
 
+    Iteracao_plot.append(Iteracao[len(Iteracao)-1])
+
     # Resultado
     print(f"Valor de x: {X[i]}")
     print(f"Iterações: {iteracao}")
@@ -69,12 +73,15 @@ for i in range(len(X)):
 
     print(df)
 
-    # Plotando o gráfico para o valor atual de x
-    plt.plot(Iteracao, ERROR, label=f'x = {X[i]}')
-    plt.title('Gráfico de Erro x Iteração')
-    plt.xlabel('Iteração')
-    plt.ylabel('Erro (%)')
-    plt.legend()
+    
+
+# Plotando o gráfico para o valor atual de x
+X_plot = ['-1.99', '-1.6', '-1.3', '-1.01']
+plt.bar(X_plot, Iteracao_plot, color = 'purple',width=0.4)
+plt.xlabel('Valor de X')
+plt.ylabel('Iteração')
+plt.legend()
+
 
 # Mostra o gráfico após todas as iterações
 plt.show()
