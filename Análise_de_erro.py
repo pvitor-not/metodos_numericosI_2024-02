@@ -1,5 +1,4 @@
 import math
-import sys
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
@@ -85,4 +84,3 @@ plt.legend()
 
 # Mostra o gráfico após todas as iterações
 plt.show()
-#Boa Noite
