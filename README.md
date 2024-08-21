@@ -5,5 +5,5 @@
 O código foi desenvolvido para estimar valores de uma função representada por uma séries de potência. A função utilizada encontra-se abaixo:
 
 <div align="center">
-  <img alt="Equação utilizada." src="https://i.imgur.com/iBKOQmE.png" width="500">
+  <img alt="Equação utilizada." src="https://i.imgur.com/iBKOQmE.png" width="350">
 </div>
